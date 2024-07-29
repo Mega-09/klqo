@@ -138,7 +138,7 @@ async def sync(ctx):
         print("bro has no admin and tries to sync lol")
 
 @bot.command()
-async def ticket_thing(ctx):
+async def ticket_embed(ctx):
     if ctx.author.guild_permissions.administrator == True:
         embed = discord.Embed(title="Verify yourself", color=discord.Colour.yellow())
         embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/1141400786304241704/1164998096552464484/Muerto_or_Vivo.png?ex=65454006&is=6532cb06&hm=676768a124ce67ac008dcd3626c7a53cded7a7a9f488b333f5cd791a9f9d5d49&")
@@ -148,7 +148,7 @@ async def ticket_thing(ctx):
         await ctx.send(embed=embed, view=view)
 
 @bot.command()
-async def llamada_thing(ctx):
+async def call_embed(ctx):
     if ctx.author.guild_permissions.administrator == True:
         embed = discord.Embed(title="Make a Call", color=discord.Colour.yellow())
         embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/1141400786304241704/1164998096552464484/Muerto_or_Vivo.png?ex=65454006&is=6532cb06&hm=676768a124ce67ac008dcd3626c7a53cded7a7a9f488b333f5cd791a9f9d5d49&")
