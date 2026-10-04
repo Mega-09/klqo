@@ -382,7 +382,7 @@ class ModalCall(discord.ui.Modal, title='Make a call'):
     notes = discord.ui.TextInput(label='Notes', min_length=0, max_length=100, placeholder="For example: Henry/Spencer and important things", required=False)
 
     async def on_submit(self, interaction: discord.Interaction):
-        rblxID = requests.get(f'https://api.blox.link/v4/public/guilds/{interaction.guild_id}/discord-to-roblox/{interaction.user.id}',  headers={"Authorization" : "554127d8-47f7-4aa7-addb-683b78907672"}).json()["robloxID"]
+        rblxID = requests.get(f'https://api.blox.link/v4/public/guilds/{interaction.guild_id}/discord-to-roblox/{interaction.user.id}',  headers={"Authorization" : "BLOXLINK_API"}).json()["robloxID"]
         rblx_link = f"https://www.roblox.com/users/{rblxID}/profile"        
         channel = bot.get_channel(1164960999758114958)
         embed = discord.Embed(title=f"`{interaction.user.name}` made a Call, join them NOW!", color=discord.Colour.yellow())
